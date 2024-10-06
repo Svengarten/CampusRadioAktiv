@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alte Sendungen - Campus Radio Aktiv</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #002E5E;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        nav {
+            margin: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #F7951B;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f4f4f4;
+            color: #002E5E;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .blog-posts {
+            flex: 10;
+            margin-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sendung-post {
+            background-color: #002E5E;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: calc(33.333% - 20px); /* 3 Sendungen nebeneinander */
+        }
+
+        .sendung-post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .sendung-post-header .avatar {
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .sendung-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .audio-container {
+            margin: 10px 0;
+        }
+
+        .audio-player {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .text {
+            font-size: 14px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .likes {
+            margin-top: 10px;
+            color: #999;
+        }
+
+        aside.info-area {
+            flex: 2;
+            background-color: #002E5E;
+            color: ghostwhite;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .person {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .person img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #F7951B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #e68a00;
+        }
+
+        footer {
+            background-color: #002E5E;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo"></div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="social.html">Startseite</a></li>
+                <li><a href="sendungen.html">Sendungen</a></li>
+                <li><a href="#">Beiträge</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Suche...">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blog-posts">
+            <div class="sendung-post">
+                <div class="sendung-post-header">
+                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
+                    <div class="sendung-title">Campus Radio Aktiv</div>
+                </div>
+                <div class="audio-container">
+                    <audio controls class="audio-player">
+                        <source src="assets/audio/sendung1.mp3" type="audio/mpeg">
+                        Ihr Browser unterstützt den Audio-Tag.
+                    </audio>
+                </div>
+                <div class="text">
+                    <p>Diese Sendung behandelt spannende Themen rund um das Campus Leben.</p>
+                </div>
+                <div class="likes">👍 12 Likes</div>
+            </div>
+
+            <div class="sendung-post">
+                <div class="sendung-post-header">
+                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
+                    <div class="sendung-title">Campus Radio Aktiv</div>
+                </div>
+                <div class="audio-container">
+                    <audio controls class="audio-player">
+                        <source src="assets/audio/sendung2.mp3" type="audio/mpeg">
+                        Ihr Browser unterstützt den Audio-Tag.
+                    </audio>
+                </div>
+                <div class="text">
+                    <p>Ein interessantes Interview mit einem Gast über aktuelle Themen.</p>
+                </div>
+                <div class="likes">👍 20 Likes</div>
+            </div>
+
+            <div class="sendung-post">
+                <div class="sendung-post-header">
+                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
+                    <div class="sendung-title">Campus Radio Aktiv</div>
+                </div>
+                <div class="audio-container">
+                    <audio controls class="audio-player">
+                        <source src="assets/audio/sendung3.mp3" type="audio/mpeg">
+                        Ihr Browser unterstützt den Audio-Tag.
+                    </audio>
+                </div>
+                <div class="text">
+                    <p>Ein Rückblick auf die besten Musikstücke des Jahres.</p>
+                </div>
+                <div class="likes">👍 35 Likes</div>
+            </div>
+
+            <!-- Weitere Sendungen hier hinzufügen -->
+            <div class="sendung-post">
+                <div class="sendung-post-header">
+                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
+                    <div class="sendung-title">Campus Radio Austausch</div>
+                </div>
+                <div class="audio-container">
+                    <audio controls class="audio-player">
+                        <source src="assets/audio/sendung4.mp3" type="audio/mpeg">
+                        Ihr Browser unterstützt den Audio-Tag.
+                    </audio>
+                </div>
+                <div class="text">
+                    <p>Ein Austausch über wichtige Themen in der Gesellschaft.</p>
+                </div>
+                <div class="likes">👍 49 Likes</div>
+            </div>
+        </div>
+
+        <aside class="info-area">
+            <h3>Über uns</h3>
+            <p>Campus Radio Aktiv ist ein studentisches Radio, das spannende Inhalte und Musik für die Studierendenschaft bietet.</p>
+            <h3>Sendezeiten</h3>
+            <ul>
+                <li>Montag bis Freitag: 12-13 Uhr</li>
+                <li>Dienstag: 18-19 Uhr</li>
+                <li>Donnerstag: 08-10 Uhr</li>
+            </ul>
+
+            <h3>Unsere Ansprechpartner</h3>
+            <div class="person">
+                <img src="https://via.placeholder.com/50" alt="Tobias Hochscherf">
+                <span>Tobias Hochscherf</span>
+            </div>
+            <div class="person">
+                <img src="https://via.placeholder.com/50" alt="Julia Schmidt">
+                <span>Julia Schmidt</span>
+            </div>
+
+            <h3>Kontakt</h3>
+            <form class="contact-form">
+                <textarea placeholder="Ihre Nachricht..."></textarea>
+                <input type="submit" value="Absenden">
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
