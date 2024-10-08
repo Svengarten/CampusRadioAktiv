@@ -30,25 +30,25 @@
         {% for post in posts %}
             <div class="post">
                 <div class="header">
-                    <img src="{{ post.avatar }}" alt="{{ post.nickname }}'s Avatar">
+                    <img src="{{ post.user_image }}" alt="{{ post.user_realname }}'s Avatar">
                     <strong>
-                        <a href="profile.php?nickname={{ post.nickname | url_encode }}">{{ post.nickname }}</a>
+                        <a href="profile.php?nickname={{ post.user_realname | url_encode }}">{{ post.user_realname }}</a>
                     </strong>
                 </div>
                 <div class="video-container">
                     <div class="video-item">
                         <video controls>
-                            <source src="{{ post.video }}" type="video/mp4">
+                            <source src="{{ post.post_video_file }}" type="video/mp4">
                             Ihr Browser unterstützt das Video-Tag.
                         </video>
                     </div>
                 </div>
                 <div class="text" id="text-{{ loop.index }}">
-                    {{ post.text }}
+                    {{ post.post_text }}
                 </div>
                 <button class="toggle-button" onclick="toggleText({{ loop.index }})">Mehr anzeigen</button>
                 <div class="hashtags">
-                    {% for hashtag in post.hashtags %}
+                    {% for hashtag in post.post_tags %}
                         <a href="hashtag.php?tag={{ hashtag | url_encode }}">{{ hashtag }}</a>{% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </div>
