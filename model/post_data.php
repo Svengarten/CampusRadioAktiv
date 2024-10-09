@@ -8,7 +8,7 @@ $posts = array(
         "post_text" => '🎙️ Begleitet Jannik hinter die Kulissen von Campus Radio Aktiv und seinem Podcast Kielafornia. Hier ist ein kleiner Vorgeschmack auf seine nächsten Interviews bei „Janniks Straßenumfrage“ zum Thema feste Beziehung. Diese gibt es in der nächsten Donnerstag Morning Sendung zwischen 8-10 Uhr bei Kiel FM und in der nächsten Podcastfolge! 🙌🏼',
         "post_tags" => array('#festebeziehungen', '#podcast', '#interviews', '#studentenradio', '#campusradioaktiv'),
         "post_video_file" => 'assets/videos/Yannik.mp4', 
-        "post_avatar" => 'assets/img/CRA_logo.svg'
+        "post_avatar" => 'assets/img/CRA_logo.svg' 
     ),
     "2" => array(
         "username" => "campusradioaktiv",

@@ -62,7 +62,7 @@ nav ul li a:hover {
     margin-top: 20px;
     /* Abstand zwischen Header und Main 
     padding: 0 20px;
-    /* Innenabstand für die Container */
+    /* Innenabstand für die Container *
 }
 
 .blog-posts {
@@ -105,7 +105,7 @@ nav ul li a:hover {
     overflow: hidden;
     /* Überschüssiger Text wird ausgeblendet *
     transition: max-height 0.3s ease;
-    /* Sanfte Übergänge */
+    /* Sanfte Übergänge *
 }
 
 /* Media Queries für verschiedene Bildschirmgrößen */

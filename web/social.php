@@ -6,7 +6,7 @@ require_once __DIR__ . '/../model/post_data.php';
 function generateThumbnail($videoPath, $thumbnailPath) {
     $command = "ffmpeg -i $videoPath -ss 00:00:01.000 -vframes 1 $thumbnailPath";
     exec($command, $output, $return_var);
-    return $return_var === 0;
+    return $return_var === 0; 
 }
 
 
