@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../path/to/post_data.php'; // Stelle sicher, dass der Pfad korrekt ist
+require_once __DIR__ . '/../model/post_data.php'; // Stelle sicher, dass der Pfad korrekt ist
 
 // Funktion zum Generieren von Thumbnails
 function generateThumbnail($videoPath, $thumbnailPath) {
