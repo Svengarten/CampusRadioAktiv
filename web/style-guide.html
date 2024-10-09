@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alte Sendungen - Campus Radio Aktiv</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alte Sendungen - Campus Radio Aktiv</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -68,12 +78,16 @@
             margin-top: 20px;
             padding: 0 20px;
         }
+        .card-body{
+            padding: 5px;
+            align-self: center;
+        }
 
         .blog-posts {
             flex: 10;
             margin-right: 20px;
-            display: flex;
-            flex-wrap: wrap;
+            /*display: flex;
+            /*flex-wrap: wrap;*/
             gap: 20px;
         }
 
@@ -83,7 +97,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 15px;
-            width: calc(33.333% - 20px); /* 3 Sendungen nebeneinander */
+            /* width: calc(33.333% - 20px); /* 3 Sendungen nebeneinander */
         }
 
         .sendung-post-header {
@@ -122,6 +136,7 @@
         }
 
         .likes {
+            
             margin-top: 10px;
             color: #999;
         }
@@ -180,128 +195,201 @@
             margin-top: 20px;
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
 
-    <header>
-        <div class="logo"><img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo"></div>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="social.html">Startseite</a></li>
-                <li><a href="sendungen.html">Sendungen</a></li>
-                <li><a href="#">Beiträge</a></li>
-                <li><a href="#">Über uns</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Suche...">
-        </div>
-    </header>
+        <header class="d-flex py-3 px-3">
 
-    <main class="container">
-        <div class="blog-posts">
-            <div class="sendung-post">
-                <div class="sendung-post-header">
-                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
-                    <div class="sendung-title">Campus Radio Aktiv</div>
-                </div>
-                <div class="audio-container">
-                    <audio controls class="audio-player">
-                        <source src="assets/audio/sendung1.mp3" type="audio/mpeg">
-                        Ihr Browser unterstützt den Audio-Tag.
-                    </audio>
-                </div>
-                <div class="text">
-                    <p>Diese Sendung behandelt spannende Themen rund um das Campus Leben.</p>
-                </div>
-                <div class="likes">👍 12 Likes</div>
+            <div class="logo"><img src="assets/img/CRA_Logo.svg"
+                    alt="Campus Radio Aktiv Logo"></div>
+            <nav id="main-nav">
+                <ul class="nav col-12 mb-2 justify-content-center">
+                    <li><a href="social.html">Startseite</a></li>
+                    <li><a href="sendungen.html">Sendungen</a></li>
+                    <li><a href="#">Beiträge</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar col-md-3">
+                <input type="text" placeholder="Suche...">
             </div>
 
-            <div class="sendung-post">
-                <div class="sendung-post-header">
-                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
-                    <div class="sendung-title">Campus Radio Aktiv</div>
-                </div>
-                <div class="audio-container">
-                    <audio controls class="audio-player">
-                        <source src="assets/audio/sendung2.mp3" type="audio/mpeg">
-                        Ihr Browser unterstützt den Audio-Tag.
-                    </audio>
-                </div>
-                <div class="text">
-                    <p>Ein interessantes Interview mit einem Gast über aktuelle Themen.</p>
-                </div>
-                <div class="likes">👍 20 Likes</div>
-            </div>
+        </header>
 
-            <div class="sendung-post">
-                <div class="sendung-post-header">
-                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
-                    <div class="sendung-title">Campus Radio Aktiv</div>
-                </div>
-                <div class="audio-container">
-                    <audio controls class="audio-player">
-                        <source src="assets/audio/sendung3.mp3" type="audio/mpeg">
-                        Ihr Browser unterstützt den Audio-Tag.
-                    </audio>
-                </div>
-                <div class="text">
-                    <p>Ein Rückblick auf die besten Musikstücke des Jahres.</p>
-                </div>
-                <div class="likes">👍 35 Likes</div>
-            </div>
+        <main>
+            <div class="album py-5">
+                <div class="container">
+                    <div class="row  g-3">
+                        <div class="blog-posts col">
+                            <div
+                                class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 px-2"> <!-- Responive allignment -->
+                                <div class="col">
+                                    <div class="sendung-post card h-100 ml-2">
+                                        <div class="sendung-post-header">
+                                            <img src="assets/img/CRA_Logo.svg"
+                                                alt="Campus Radio Aktiv Avatar"
+                                                class="avatar">
+                                            <div class="sendung-title">Campus
+                                                Radio
+                                                Aktiv</div>
+                                        </div>
+                                        <div class="audio-container">
+                                            <audio controls
+                                                class="audio-player">
+                                                <source
+                                                    src="assets/audio/sendung1.mp3"
+                                                    type="audio/mpeg">
+                                                Ihr Browser unterstützt den
+                                                Audio-Tag.
+                                            </audio>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text text">
+                                                <p>Diese Sendung behandelt
+                                                    spannende Themen
+                                                    rund um das Campus
+                                                    Leben.</p>
+                                            </div>
+                                            <div class="likes">👍 12 Likes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="sendung-post card h-100 py-3 px-3">
+                                        <div class="sendung-post-header">
+                                            <img src="assets/img/CRA_Logo.svg"
+                                                alt="Campus Radio Aktiv Avatar"
+                                                class="avatar">
+                                            <div class="sendung-title">Campus
+                                                Radio
+                                                Aktiv</div>
+                                        </div>
+                                        <div class="audio-container">
+                                            <audio controls
+                                                class="audio-player">
+                                                <source
+                                                    src="assets/audio/sendung2.mp3"
+                                                    type="audio/mpeg">
+                                                Ihr Browser unterstützt den
+                                                Audio-Tag.
+                                            </audio>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text text">
+                                                <p>Ein interessantes Interview
+                                                    mit einem
+                                                    Gast über aktuelle
+                                                    Themen.</p>
+                                            </div>
+                                            <div class="likes">👍 20 Likes</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <!-- Weitere Sendungen hier hinzufügen -->
-            <div class="sendung-post">
-                <div class="sendung-post-header">
-                    <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Avatar" class="avatar">
-                    <div class="sendung-title">Campus Radio Austausch</div>
+                                <div class="col outer-card">
+                                    <div class="sendung-post card h-100 ml-2">
+                                        <div class="sendung-post-header">
+                                            <img src="assets/img/CRA_Logo.svg"
+                                                alt="Campus Radio Aktiv Avatar"
+                                                class="avatar">
+                                            <div class="sendung-title">Campus
+                                                Radio
+                                                Aktiv</div>
+                                        </div>
+                                        <div class="audio-container">
+                                            <audio controls
+                                                class="audio-player">
+                                                <source
+                                                    src="assets/audio/sendung3.mp3"
+                                                    type="audio/mpeg">
+                                                Ihr Browser unterstützt den
+                                                Audio-Tag.
+                                            </audio>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text">
+                                                <p>Ein Rückblick auf die besten
+                                                    Musikstücke
+                                                    des Jahres.</p>
+                                            </div>
+                                            <div class="likes">👍 35
+                                                Likes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="sendung-post card h-100 ml-2">
+                                        <div class="sendung-post-header">
+                                            <img src="assets/img/CRA_Logo.svg"
+                                                alt="Campus Radio Aktiv Avatar"
+                                                class="avatar">
+                                            <div class="sendung-title">Campus
+                                                Radio
+                                                Austausch</div>
+                                        </div>
+                                        <div class="audio-container">
+                                            <audio controls
+                                                class="audio-player">
+                                                <source
+                                                    src="assets/audio/sendung4.mp3"
+                                                    type="audio/mpeg">
+                                                Ihr Browser unterstützt den
+                                                Audio-Tag.
+                                            </audio>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text text">
+                                                <p>Ein Austausch über wichtige
+                                                    Themen in der
+                                                    Gesellschaft.</p>
+                                            </div>
+                                            <div class="likes">👍 49 Likes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="info-area col-md-6">
+                            <h3>Über uns</h3>
+                            <p>Campus Radio Aktiv ist ein studentisches Radio,
+                                das spannende Inhalte und Musik für die
+                                Studierendenschaft bietet.</p>
+                            <h3>Sendezeiten</h3>
+                            <ul>
+                                <li>Montag bis Freitag: 12-13 Uhr</li>
+                                <li>Dienstag: 18-19 Uhr</li>
+                                <li>Donnerstag: 08-10 Uhr</li>
+                            </ul>
+
+                            <h3>Unsere Ansprechpartner</h3>
+                            <div class="person">
+                                <img src="https://via.placeholder.com/50"
+                                    alt="Tobias Hochscherf">
+                                <span>Tobias Hochscherf</span>
+                            </div>
+                            <div class="person">
+                                <img src="https://via.placeholder.com/50"
+                                    alt="Julia Schmidt">
+                                <span>Julia Schmidt</span>
+                            </div>
+
+                            <h3>Kontakt</h3>
+                            <form class="contact-form">
+                                <textarea
+                                    placeholder="Ihre Nachricht..."></textarea>
+                                <input type="submit" value="Absenden">
+                            </form>
+                        </aside>
+                    </div>
                 </div>
-                <div class="audio-container">
-                    <audio controls class="audio-player">
-                        <source src="assets/audio/sendung4.mp3" type="audio/mpeg">
-                        Ihr Browser unterstützt den Audio-Tag.
-                    </audio>
-                </div>
-                <div class="text">
-                    <p>Ein Austausch über wichtige Themen in der Gesellschaft.</p>
-                </div>
-                <div class="likes">👍 49 Likes</div>
-            </div>
-        </div>
+            </main>
 
-        <aside class="info-area">
-            <h3>Über uns</h3>
-            <p>Campus Radio Aktiv ist ein studentisches Radio, das spannende Inhalte und Musik für die Studierendenschaft bietet.</p>
-            <h3>Sendezeiten</h3>
-            <ul>
-                <li>Montag bis Freitag: 12-13 Uhr</li>
-                <li>Dienstag: 18-19 Uhr</li>
-                <li>Donnerstag: 08-10 Uhr</li>
-            </ul>
+            <footer>
+                <p>&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
+            </footer>
 
-            <h3>Unsere Ansprechpartner</h3>
-            <div class="person">
-                <img src="https://via.placeholder.com/50" alt="Tobias Hochscherf">
-                <span>Tobias Hochscherf</span>
-            </div>
-            <div class="person">
-                <img src="https://via.placeholder.com/50" alt="Julia Schmidt">
-                <span>Julia Schmidt</span>
-            </div>
-
-            <h3>Kontakt</h3>
-            <form class="contact-form">
-                <textarea placeholder="Ihre Nachricht..."></textarea>
-                <input type="submit" value="Absenden">
-            </form>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
-    </footer>
-
-</body>
-</html>
+        </body>
+    </html>
