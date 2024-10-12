@@ -51,6 +51,7 @@ $posts = array(
         "post_text" => '🍿 Schaue den ganzen Stream als VOD jetzt auf Twitch!',
         "post_tags" => array('#oscar', '#oscars', '#oscars2024', '#fachhochschulekiel', '#fhkiel'),
         "post_video_file" => '/assets/videos/Oscar1.mp4', 
+        "post_avatar" => 'assets/img/CRA_logo.svg'
     ),
     "6" => array(
         "username" => "campusradioaktiv",
@@ -59,7 +60,8 @@ $posts = array(
         "user_image" => "Insta.jpg",
         "post_text" => 'BEHIND THE SCENES - unsere Schampusradio Aktiv Show 2023 🪩🎊🍾 Was ging bei unserer letzten Show eigentlich hinter den Kulissen ab? Jetzt habt ihr eure Antwort. 🫣🥂 Wir hoffen ihr seid alle gut ins neue Jahr gerutscht. An alle Student:innen: Viel Erfolg bei der Klausurenphase. Ihr packt das!!! ✊🏼',
         "post_tags" => array('#schampusradioaktiv', '#Radio'),
-        "post_video_file" => '/assets/videos/Silvester.mp4', 
+        "post_video_file" => '/assets/videos/Silvester.mp4',
+        "post_avatar" => 'assets/img/CRA_logo.svg' 
     ), "7" => array(
         "username" => "campusradioaktiv",
         "userid" => 1,
@@ -68,6 +70,7 @@ $posts = array(
         "post_text" => 'BEHIND THE SCENES - unsere Schampusradio Aktiv Show 2023 🪩🎊🍾 Was ging bei unserer letzten Show eigentlich hinter den Kulissen ab? Jetzt habt ihr eure Antwort. 🫣🥂 Wir hoffen ihr seid alle gut ins neue Jahr gerutscht. An alle Student:innen: Viel Erfolg bei der Klausurenphase. Ihr packt das!!! ✊🏼',
         "post_tags" => array('#schampusradioaktiv', '#Radio'),
         "post_video_file" => '/assets/videos/Silvester.mp4', 
+        "post_avatar" => 'assets/img/CRA_logo.svg'
     ), "8" => array(
         "username" => "campusradioaktiv",
         "userid" => 1,
@@ -76,6 +79,7 @@ $posts = array(
         "post_text" => 'BEHIND THE SCENES - unsere Schampusradio Aktiv Show 2023 🪩🎊🍾 Was ging bei unserer letzten Show eigentlich hinter den Kulissen ab? Jetzt habt ihr eure Antwort. 🫣🥂 Wir hoffen ihr seid alle gut ins neue Jahr gerutscht. An alle Student:innen: Viel Erfolg bei der Klausurenphase. Ihr packt das!!! ✊🏼',
         "post_tags" => array('#schampusradioaktiv', '#Radio'),
         "post_video_file" => '/assets/videos/Silvester.mp4', 
+        "post_avatar" => 'assets/img/CRA_logo.svg'
     ), "9" => array(
         "username" => "campusradioaktiv",
         "userid" => 1,
@@ -84,6 +88,17 @@ $posts = array(
         "post_text" => 'BEHIND THE SCENES - unsere Schampusradio Aktiv Show 2023 🪩🎊🍾 Was ging bei unserer letzten Show eigentlich hinter den Kulissen ab? Jetzt habt ihr eure Antwort. 🫣🥂 Wir hoffen ihr seid alle gut ins neue Jahr gerutscht. An alle Student:innen: Viel Erfolg bei der Klausurenphase. Ihr packt das!!! ✊🏼',
         "post_tags" => array('#schampusradioaktiv', '#Radio'),
         "post_video_file" => '/assets/videos/Silvester.mp4', 
+        "post_avatar" => 'assets/img/CRA_logo.svg'
+    ),
+    , "10" => array(
+        "username" => "campusradioaktiv",
+        "userid" => 1,
+        "user_realname" => "Jannik",
+        "user_image" => "Insta.jpg",
+        "post_text" => 'BEHIND THE SCENES - unsere Schampusradio Aktiv Show 2023 🪩🎊🍾 Was ging bei unserer letzten Show eigentlich hinter den Kulissen ab? Jetzt habt ihr eure Antwort. 🫣🥂 Wir hoffen ihr seid alle gut ins neue Jahr gerutscht. An alle Student:innen: Viel Erfolg bei der Klausurenphase. Ihr packt das!!! ✊🏼',
+        "post_tags" => array('#schampusradioaktiv', '#Radio'),
+        "post_video_file" => '/assets/videos/Silvester.mp4', 
+        "post_avatar" => 'assets/img/CRA_logo.svg'
     ),
 );
 ?>
