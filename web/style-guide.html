@@ -1,395 +1,144 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Alte Sendungen - Campus Radio Aktiv</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous">
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-
-        <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #002E5E;
-            color: white;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header .logo img {
-            height: 50px;
-            margin-left: 20px;
-        }
-
-        nav {
-            margin: 0 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #F7951B;
-            text-decoration: none;
-            padding: 5px 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f4f4f4;
-            color: #002E5E;
-            border-radius: 5px;
-        }
-
-        .search-bar {
-            margin-right: 20px;
-        }
-
-        .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .container {
-            display: flex;
-            margin-top: 20px;
-            padding: 0 20px;
-        }
-        .card-body{
-            padding: 5px;
-            align-self: center;
-        }
-
-        .blog-posts {
-            flex: 10;
-            margin-right: 20px;
-            /*display: flex;
-            /*flex-wrap: wrap;*/
-            gap: 20px;
-        }
-
-        .sendung-post {
-            background-color: #002E5E;
-            color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            /* width: calc(33.333% - 20px); /* 3 Sendungen nebeneinander */
-        }
-
-        .sendung-post-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .sendung-post-header .avatar {
-            border-radius: 50%;
-            height: 40px;
-            width: 40px;
-            margin-right: 10px;
-        }
-
-        .sendung-title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .audio-container {
-            margin: 10px 0;
-        }
-
-        .audio-player {
-            width: 100%;
-            height: 50px;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        .text {
-            font-size: 14px;
-            margin: 10px 0;
-            color: white;
-        }
-
-        .likes {
-            
-            margin-top: 10px;
-            color: #999;
-        }
-
-        aside.info-area {
-            flex: 2;
-            background-color: #002E5E;
-            color: ghostwhite; 
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .person {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .person img {
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .contact-form {
-            margin-top: 20px;
-        }
-
-        .contact-form textarea {
-            width: 100%;
-            height: 80px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            padding: 5px;
-        }
-
-        .contact-form input[type="submit"] {
-            padding: 10px 15px;
-            background-color: #F7951B;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact-form input[type="submit"]:hover {
-            background-color: #e68a00;
-        }
-
-        footer {
-            background-color: #002E5E;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
-    </head>
-    <body>
-
-        <header class="d-flex py-3 px-3">
-
-            <div class="logo"><img src="assets/img/CRA_Logo.svg"
-                    alt="Campus Radio Aktiv Logo"></div>
-            <nav id="main-nav">
-                <ul class="nav col-12 mb-2 justify-content-center">
-                    <li><a href="social.html">Startseite</a></li>
-                    <li><a href="sendungen.html">Sendungen</a></li>
-                    <li><a href="#">Beiträge</a></li>
-                    <li><a href="#">Über uns</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar col-md-3">
-                <input type="text" placeholder="Suche...">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css"> <!-- Pfad zu deiner custom.css -->
+    <link rel="stylesheet" href="assets/css/sendungen.css"> <!-- Pfad zu deiner sendungen.css -->
+    <link rel="stylesheet" href="styleguide.css"> <!-- Hier wird die Styleguide-CSS-Datei eingebunden -->
+</head>
+<body>
+    <div class="container">
+        <h1>Styleguide</h1>
+        
+        <h2>Farben</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="color-swatch" style="background-color: #002E5E;"></div>
+                <p>#002E5E - Primärfarbe</p>
             </div>
+            <div class="col-6">
+                <div class="color-swatch" style="background-color: #F7951B;"></div>
+                <p>#F7951B - Akzentfarbe</p>
+            </div>
+            <div class="col-6">
+                <div class="color-swatch" style="background-color: #f4f4f4;"></div>
+                <p>#f4f4f4 - Hintergrundfarbe</p>
+            </div>
+            <div class="col-6">
+                <div class="color-swatch" style="background-color: white;"></div>
+                <p>Weiß - Textfarbe</p>
+            </div>
+            <div class="col-6">
+                <div class="color-swatch" style="background-color: #999999;"></div>
+                <p>#999999 - Sekundärtextfarbe</p>
+            </div>
+        </div>
 
-        </header>
+        <h2>Typografie</h2>
+        <h3>Überschrift 1</h3>
+        <h1>Beispieltext H1</h1>
+        
+        <h3>Überschrift 2</h3>
+        <h2>Beispieltext H2</h2>
+        
+        <h3>Überschrift 3</h3>
+        <h3>Beispieltext H3</h3>
+        
+        <h3>Text</h3>
+        <p>Beispieltext: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <main>
-            <div class="album py-5">
-                <div class="container">
-                    <div class="row  g-3">
-                        <div class="blog-posts col">
-                            <div
-                                class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 px-2"> <!-- Responive allignment -->
-                                <div class="col">
-                                    <div class="sendung-post card h-100 ml-2">
-                                        <div class="sendung-post-header">
-                                            <img src="assets/img/CRA_Logo.svg"
-                                                alt="Campus Radio Aktiv Avatar"
-                                                class="avatar">
-                                            <div class="sendung-title">Campus
-                                                Radio
-                                                Aktiv</div>
-                                        </div>
-                                        <div class="audio-container">
-                                            <audio controls
-                                                class="audio-player">
-                                                <source
-                                                    src="assets/audio/sendung1.mp3"
-                                                    type="audio/mpeg">
-                                                Ihr Browser unterstützt den
-                                                Audio-Tag.
-                                            </audio>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-text text">
-                                                <p>Diese Sendung behandelt
-                                                    spannende Themen
-                                                    rund um das Campus
-                                                    Leben.</p>
-                                            </div>
-                                            <div class="likes">👍 12 Likes</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div
-                                        class="sendung-post card h-100 py-3 px-3">
-                                        <div class="sendung-post-header">
-                                            <img src="assets/img/CRA_Logo.svg"
-                                                alt="Campus Radio Aktiv Avatar"
-                                                class="avatar">
-                                            <div class="sendung-title">Campus
-                                                Radio
-                                                Aktiv</div>
-                                        </div>
-                                        <div class="audio-container">
-                                            <audio controls
-                                                class="audio-player">
-                                                <source
-                                                    src="assets/audio/sendung2.mp3"
-                                                    type="audio/mpeg">
-                                                Ihr Browser unterstützt den
-                                                Audio-Tag.
-                                            </audio>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-text text">
-                                                <p>Ein interessantes Interview
-                                                    mit einem
-                                                    Gast über aktuelle
-                                                    Themen.</p>
-                                            </div>
-                                            <div class="likes">👍 20 Likes</div>
-                                        </div>
-                                    </div>
-                                </div>
+        <h2>Buttons</h2>
+        <button class="btn btn-primary">Primärer Button</button>
+        <button class="btn btn-secondary">Sekundärer Button</button>
+        <button class="btn btn-warning">Warnungs Button</button>
+        <button class="btn btn-light">Heller Button</button>
+        <button class="btn btn-dark">Dunkler Button</button>
 
-                                <div class="col outer-card">
-                                    <div class="sendung-post card h-100 ml-2">
-                                        <div class="sendung-post-header">
-                                            <img src="assets/img/CRA_Logo.svg"
-                                                alt="Campus Radio Aktiv Avatar"
-                                                class="avatar">
-                                            <div class="sendung-title">Campus
-                                                Radio
-                                                Aktiv</div>
-                                        </div>
-                                        <div class="audio-container">
-                                            <audio controls
-                                                class="audio-player">
-                                                <source
-                                                    src="assets/audio/sendung3.mp3"
-                                                    type="audio/mpeg">
-                                                Ihr Browser unterstützt den
-                                                Audio-Tag.
-                                            </audio>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="text">
-                                                <p>Ein Rückblick auf die besten
-                                                    Musikstücke
-                                                    des Jahres.</p>
-                                            </div>
-                                            <div class="likes">👍 35
-                                                Likes</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="sendung-post card h-100 ml-2">
-                                        <div class="sendung-post-header">
-                                            <img src="assets/img/CRA_Logo.svg"
-                                                alt="Campus Radio Aktiv Avatar"
-                                                class="avatar">
-                                            <div class="sendung-title">Campus
-                                                Radio
-                                                Austausch</div>
-                                        </div>
-                                        <div class="audio-container">
-                                            <audio controls
-                                                class="audio-player">
-                                                <source
-                                                    src="assets/audio/sendung4.mp3"
-                                                    type="audio/mpeg">
-                                                Ihr Browser unterstützt den
-                                                Audio-Tag.
-                                            </audio>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-text text">
-                                                <p>Ein Austausch über wichtige
-                                                    Themen in der
-                                                    Gesellschaft.</p>
-                                            </div>
-                                            <div class="likes">👍 49 Likes</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <h2>Formulare</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">E-Mail Adresse</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Gib deine E-Mail ein">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Passwort</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort">
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea">Nachricht</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
 
-                        <aside class="info-area col-md-6">
-                            <h3>Über uns</h3>
-                            <p>Campus Radio Aktiv ist ein studentisches Radio,
-                                das spannende Inhalte und Musik für die
-                                Studierendenschaft bietet.</p>
-                            <h3>Sendezeiten</h3>
-                            <ul>
-                                <li>Montag bis Freitag: 12-13 Uhr</li>
-                                <li>Dienstag: 18-19 Uhr</li>
-                                <li>Donnerstag: 08-10 Uhr</li>
-                            </ul>
+        <h2>Navigation</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Startseite <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sendungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beiträge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-                            <h3>Unsere Ansprechpartner</h3>
-                            <div class="person">
-                                <img src="https://via.placeholder.com/50"
-                                    alt="Tobias Hochscherf">
-                                <span>Tobias Hochscherf</span>
-                            </div>
-                            <div class="person">
-                                <img src="https://via.placeholder.com/50"
-                                    alt="Julia Schmidt">
-                                <span>Julia Schmidt</span>
-                            </div>
+        <h2>Karten</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Karten Titel</h5>
+                <p class="card-text">Ein kurzer Beschreibungstext für die Karte.</p>
+                <a href="#" class="btn btn-primary">Zur Aktion</a>
+            </div>
+        </div>
 
-                            <h3>Kontakt</h3>
-                            <form class="contact-form">
-                                <textarea
-                                    placeholder="Ihre Nachricht..."></textarea>
-                                <input type="submit" value="Absenden">
-                            </form>
-                        </aside>
+        <h2>Modale</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Modal öffnen
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal Titel</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Hier ist der Inhalt des Modals.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                        <button type="button" class="btn btn-primary">Speichern Änderungen</button>
                     </div>
                 </div>
-            </main>
+            </div>
+        </div>
+    </div>
 
-            <footer>
-                <p>&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
-            </footer>
-
-        </body>
-    </html>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
