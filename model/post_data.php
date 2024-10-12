@@ -90,7 +90,7 @@ $posts = array(
         "post_video_file" => '/assets/videos/Silvester.mp4', 
         "post_avatar" => 'assets/img/CRA_logo.svg'
     ),
-     "10" => array(
+        "10" => array(
         "username" => "campusradioaktiv",
         "userid" => 1,
         "user_realname" => "Jannik",
