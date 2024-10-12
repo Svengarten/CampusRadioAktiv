@@ -9,25 +9,22 @@ function generateThumbnail($videoPath, $thumbnailPath) {
     return $return_var === 0; 
 }
 
-
-// Wenn Nicname gesetzt ist
+// Wenn Nickname gesetzt ist
 if (isset($_GET['nickname'])) {
     $nickname = htmlspecialchars($_GET['nickname']); 
-    // Logic Nickname
     echo "Profil von " . $nickname;
-} 
-    
-// Wenn Hastag gesetzt ist
+}
+
+// Wenn Hashtag gesetzt ist
 if (isset($_GET['tag'])) {
-    $tag = htmlspecialchars($_GET['tag']); // Sichere Ausgabe
-    // Hier kannst du dann die Logik für das Hashtag einfügen
+    $tag = htmlspecialchars($_GET['tag']);
     echo "Beiträge zu " . $tag;
 }
 
 // Einbindung Thumbnail
 foreach ($posts as $post) {
     $thumbnailPath = '/assets/videos/thumb/' . basename($post['post_video_file'], '.mp4') . '_thumbnail.jpg';
-    if (!file_exists($thumbnailPath)) { // Wenn das Thumbnail nicht existiert
+    if (!file_exists($thumbnailPath)) {
         generateThumbnail($post['post_video_file'], $thumbnailPath);
     }
 }
