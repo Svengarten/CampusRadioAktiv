@@ -9,7 +9,6 @@ function generateThumbnail($videoPath, $thumbnailPath) {
     return $return_var === 0; 
 }
 
-
 // Wenn Nicname gesetzt ist
 if (isset($_GET['nickname'])) {
     $nickname = htmlspecialchars($_GET['nickname']); 
