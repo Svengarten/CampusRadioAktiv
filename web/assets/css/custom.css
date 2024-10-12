@@ -366,10 +366,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    font-size: 32px; /* Schriftgröße verdoppeln */
-    text-align: center; /* Inhalte zentrieren */
 }
-
 
 header {
     background-color: #002E5E;
@@ -381,13 +378,8 @@ header {
 }
 
 header .logo img {
-    height: 100px; /* Höhe verdoppeln */
+    height: 50px;
     margin-left: 20px;
-}
-
-header, nav, .container, .blog-posts, aside.info-area {
-    justify-content: center; /* Flexbox-Elemente zentrieren */
-    display: flex; /* Flexbox aktivieren */
 }
 
 nav {
