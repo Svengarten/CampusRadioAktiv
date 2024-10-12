@@ -5,98 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media - Campus Radio Aktiv</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo"><img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo"></div>
+<header>
+    <div class="container d-flex justify-content-between align-items-center py-3">
+        <div class="logo"><img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo" height="50"></div>
         <nav id="main-nav">
-            <ul>
-                <li><a href="social.php">Startseite</a></li>
-                <li><a href="sendungen.php">Sendungen</a></li>
-                <li><a href="#">Beiträge</a></li>
-                <li><a href="#">Über uns</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="social.php">Startseite</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Archiv
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sendungen.php">Sendungen</a>
+                        <a class="dropdown-item" href="beitraege.php">Beiträge</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Über uns</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Suche...">
+            <input type="text" class="form-control" placeholder="Suche...">
         </div>
-    </header>
-
-    <main class="container">
-    <div class="blog-posts">
-        {% for post in posts %}
-            <div class="post">
-                <div class="header">
-                    <img src="{{ post.user_image }}" alt="{{ post.user_realname }}'s Avatar">
-                    <strong>
-                        <a href="profile.php?nickname={{ post.user_realname | url_encode }}">{{ post.user_realname }}</a>
-                    </strong>
-                </div>
-                <div class="video-container">
-                    <div class="video-item">
-                        <video controls>
-                            <source src="{{ post.post_video_file }}" type="video/mp4">
-                            Ihr Browser unterstützt das Video-Tag.
-                        </video>
-                    </div>
-                </div>
-                <div class="text" id="text-{{ loop.index }}">
-                    {{ post.post_text }}
-                </div>
-                <button class="toggle-button" onclick="toggleText({{ loop.index }})">Mehr anzeigen</button>
-                <div class="hashtags">
-                    {% for hashtag in post.post_tags %}
-                        <a href="hashtag.php?tag={{ hashtag | url_encode }}">{{ hashtag }}</a>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="likes">
-                    👍 {{ post.likes }} Likes
-                </div>
-            </div>
-        {% endfor %}
     </div>
+</header>
 
-        <aside class="info-area">
-            <h3>Über uns</h3>
-            <p>Campus Radio Aktiv ist ein studentisches Radio, das spannende Inhalte und Musik für die Studierendenschaft bietet.</p>
-            <h3>Sendezeiten</h3>
-            <ul>
-                <li>Montag bis Freitag: 12-13 Uhr</li>
-                <li>Dienstag: 18-19 Uhr</li>
-                <li>Donnerstag: 08-10 Uhr</li>
+<main class="container my-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="blog-posts">
+                {% for post in posts %}
+                    <div class="post card mb-4">
+                        <div class="card-body">
+                            <div class="header d-flex align-items-center">
+                                <img src="{{ post.user_image }}" alt="{{ post.user_realname }}'s Avatar" class="rounded-circle" height="40" width="40">
+                                <strong class="ml-2">
+                                    <a href="profile.php?nickname={{ post.user_realname | url_encode }}">{{ post.user_realname }}</a>
+                                </strong>
+                            </div>
+                            <div class="video-container mt-2">
+                                <video controls class="w-100">
+                                    <source src="{{ post.post_video_file }}" type="video/mp4">
+                                    Ihr Browser unterstützt das Video-Tag.
+                                </video>
+                            </div>
+                            <div class="text" id="text-{{ loop.index }}">
+                                {{ post.post_text }}
+                            </div>
+                            <button class="toggle-button btn mt-2" onclick="toggleText({{ loop.index }})">Mehr anzeigen</button>
+                            <div class="hashtags mt-2">
+                                {% for hashtag in post.post_tags %}
+                                    <a href="hashtag.php?tag={{ hashtag | url_encode }}" class="hashtag-button">{{ hashtag }}</a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="likes mt-2">
+                                👍 {{ post.likes }} Likes
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+<aside class="col-md-4">
+    <div class="info-area card p-3">
+        <h3 class="card-title">Über uns</h3>
+        <p>Campus Radio Aktiv ist ein studentisches Radio, das spannende Inhalte und Musik für die Studierendenschaft bietet.</p>
+        
+        <h3 class="card-title">Sendezeiten</h3>
+        <ul class="list-group mb-3">
+            <li class="list-group-item">Montag bis Freitag: 12-13 Uhr</li>
+            <li class="list-group-item">Dienstag: 18-19 Uhr</li>
+            <li class="list-group-item">Donnerstag: 08-10 Uhr</li>
+        </ul>
+
+        <h3 class="card-title">Kontakt zum Studio via WhatsApp</h3>
+        <p>
+            <a href="https://wa.me/YOUR_NUMBER?text=Hallo%20Campus%20Radio%20Aktiv!" class="btn btn-success btn-block" target="_blank">
+                Nachricht an das Studio senden
+            </a>
+        </p>
+
+        <h3 class="card-title">Interesse am Campus Radio?</h3>
+        <p>
+            Scanne den QR-Code, um mehr Informationen zu erhalten oder um mitzumachen!
+        </p>
+        <img src="assets/img/frame.png" alt="QR-Code für Campus Radio Aktiv" class="img-fluid mb-3" />
+
+        <h3 class="card-title">E-Mail senden</h3>
+        <input type="text" class="form-control mb-2" placeholder="Ihr Name" required>
+        <textarea class="form-control mb-2" placeholder="Ihre Nachricht" required></textarea>
+        <input type="submit" value="Absenden" class="btn btn-warning">
+    </div>
+</aside>
+    </div>
+</main>
+
+<footer class="text-center py-3">
+    <div class="justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
+        <nav id="footer-nav">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link " href="#">Datenschutz</a></li>
+                <li class="nav-item"><a class="nav-link " href="#">Impressum</a></li>
+                <li class="nav-item"><a class="nav-link " href="#">Kontakt</a></li>
             </ul>
+        </nav>
+    </div>
+</footer>
 
-            <h3>Unsere Ansprechpartner</h3>
-            <div class="person">
-                <img src="assets/img/Tobi.jpg" alt="Tobias Hochscherf">
-                <div>
-                    <strong>Tobias Hochscherf</strong><br>
-                    Chef vom Dienst
-                </div>
-            </div>
-            <div class="person">
-                <img src="assets/img/Olli.jpg" alt="Oliver Ujc">
-                <div>
-                    <strong>Oliver Ujc</strong><br>
-                    Chefredakteur
-                </div>
-            </div>
 
-            <h3>Interesse am Campus Radio?</h3>
-            <div class="contact-form">
-                <h3>E-Mail senden</h3>
-                <textarea placeholder="Ihre Nachricht"></textarea>
-                <input type="submit" value="Absenden">
-            </div>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
-    </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
     function toggleText(index) {

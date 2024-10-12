@@ -40,3 +40,4 @@ $twig = new \Twig\Environment($loader);
 
 // Rendern der Seite
 echo $twig->render('social.twig', ['posts' => $posts]);
+?>

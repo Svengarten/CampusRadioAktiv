@@ -1,3 +1,4 @@
+/* Grundlegende Stile */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,18 +6,33 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header-Stile */
 header {
-    background-color: #002E5E;
+    background-color: #002E5E; /* Dunkelblau */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0; /* Padding für Header */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Flexbox ausrichten, um Logo und Text links anzuordnen */
+}
+
+header .logo {
+    margin-left: -250px; /* Abstand zwischen Logo und Text */
 }
 
 header .logo img {
-    height: 50px;
-    margin-left: 20px;
+    height: 150px; /* Erhöhte Logo-Höhe auf 150px */
+}
+
+header a {
+    font-size: 2em; /* Größere Schriftgröße */
+    margin-right: 20px; /* Abstand zwischen den Links im Header */
+    text-decoration: none; /* Keine Unterstreichung */
+    color: #F7951B; /* Linkfarbe auf orange setzen */
+}
+
+header a:hover {
+    color: #F7951B; /* Hover-Farbe für Header-Links */
 }
 
 nav {
@@ -34,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #F7951B; /* Farbe geändert auf #F7951B */
+    color: #F7951B; /* Orange */
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s, color 0.3s;
@@ -46,8 +62,32 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Dropdown-Stile */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Zeige das Dropdown-Menü beim Hover an */
+}
+
+.dropdown-menu {
+    display: none; /* Standardmäßig nicht anzeigen */
+    position: absolute; /* Positionierung */
+    background-color: #002E5E; /* Hintergrundfarbe */
+    border: 1px solid #e68a00; /* Rand */
+    border-radius: 0.25rem; /* Abgerundete Ecken */
+    z-index: 1000; /* Über andere Elemente legen */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem; /* Innenabstand */
+    color: #e68a00; /* Textfarbe */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Hintergrundfarbe beim Hover */
+    color: #007bff; /* Textfarbe beim Hover */
+}
+
 .search-bar {
-    margin-right: 20px;
+    margin-right: -250px;
 }
 
 .search-bar input {
@@ -56,225 +96,117 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Container für Blog-Beiträge */
 .container {
     display: flex;
-    margin-top: 20px; /* Abstand zwischen Header und Main */
-    padding: 0 20px; /* Innenabstand für die Container */
+    margin-top: 20px;
+    padding: 0 20px; /* Angepasster Padding für mehr Platz links und rechts */
 }
 
+/* Blog-Beiträge */
 .blog-posts {
-    flex: 10; /* Breite für die Posts auf 10 von 12 setzen */
+    flex: 10;
     margin-right: 20px;
     display: flex;
-    flex-wrap: wrap; /* Ermöglicht Zeilenumbruch für Posts */
+    flex-wrap: wrap; /* Ermöglicht das Umbrechen der Posts in die nächste Zeile */
     gap: 20px; /* Abstand zwischen den Posts */
 }
 
-.post {
-    background-color: #002E5E; /* Hintergrundfarbe der Posts anpassen */
-    color: white; /* Textfarbe der Posts anpassen */
+/* Allgemeine Post-Styles */
+.post, .sendung-post {
+    background-color: #002E5E; /* Dunkelblau */
+    color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: calc(20% - 20px); /* Breite für 3 Posts nebeneinander */
-    box-sizing: border-box; /* Damit Padding und Border in der Breite enthalten sind */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: calc(48% - 20px); /* 2 Posts nebeneinander bei mittleren Bildschirmen */
+    box-sizing: border-box;
+    overflow: hidden; /* Versteckt überlaufenden Text */
+    position: relative; /* Für absolute Positionierung der Pfeile */
+}
+
+/* Pfeil-Stile */
+.arrow {
+    position: absolute; /* Positioniert den Pfeil relativ zum Post */
+    top: 50%; /* Vertikal zentrieren */
+    transform: translateY(-50%); /* Zentrierung */
+    font-size: 2em; /* Größe der Pfeile */
+    color: #F7951B; /* Pfeilfarbe */
+    cursor: pointer; /* Zeiger-Cursor beim Hover */
+}
+
+.arrow.left {
+    left: -40px; /* Abstand von der linken Seite */
+}
+
+.arrow.right {
+    right: -40px; /* Abstand von der rechten Seite */
 }
 
 /* Textbegrenzung für Posts */
 .text {
-    max-height: 50px; /* Maximale Höhe des Textes */
-    overflow: hidden; /* Überschüssiger Text wird ausgeblendet */
-    transition: max-height 0.3s ease; /* Sanfte Übergänge */
+    max-height: 4.5em; /* Maximale Höhe für 3 Zeilen */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.text.expand {
+    max-height: none; /* Volle Höhe anzeigen, wenn expandiert */
 }
 
 /* Media Queries für verschiedene Bildschirmgrößen */
 @media (max-width: 1024px) {
-    .post {
-        width: calc(50% - 20px); /* 2 Posts nebeneinander bei mittleren Bildschirmen */
+    .post, .sendung-post {
+        width: calc(48% - 20px); /* 2 Posts nebeneinander bei mittleren Bildschirmen */
     }
 }
 
 @media (max-width: 600px) {
-    .post {
+    .post, .sendung-post {
         width: calc(100% - 20px); /* 1 Post pro Zeile bei kleinen Bildschirmen */
     }
 }
 
+/* Header in Posts */
 .post .header {
     display: flex;
     align-items: center;
 }
 
-.post .header img {
+.post .header img, .sendung-post-header .avatar {
     border-radius: 50%;
     height: 40px;
     width: 40px;
     margin-right: 10px;
 }
 
-.video-container {
+/* Mediencontainer */
+.video-container, .audio-container {
     margin-top: 10px;
-}
-
-.video-item {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 150px; /* Höhe des Videos */
-}
-
-.video-item video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
-
-.toggle-button {
-    margin-top: 10px;
-    background-color: #F7951B; /* Hintergrundfarbe für die Schaltflächen */
-    color: white; /* Schriftfarbe für die Schaltflächen */
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px; /* Polsterung für die Schaltflächen */
-    cursor: pointer; /* Cursor ändern bei Hover */
-    transition: background-color 0.3s; /* Sanfte Übergänge */
-}
-
-.toggle-button:hover {
-    background-color: #e68a00; /* Dunklere Farbe beim Hover */
-}
-
-.hashtags {
-    color: white; /* Textfarbe der Hashtags auf weiß setzen */
-}
-
-.hashtags a {
-    color: white; /* Linkfarbe der Hashtags auf weiß setzen */
-    text-decoration: none; /* Keine Unterstreichung */
-}
-
-.hashtags a:hover {
-    color: #F7951B; /* Farbe beim Hover auf die Headerfarbe ändern */
-}
-
-.likes {
-    color: #999;
-}
-
-aside.info-area {
-    flex: 2; /* Breite für den Info-Blog auf 2 von 12 setzen */
-    background-color: #002E5E; /* Hintergrundfarbe für die Info-Seite */
-    color: ghostwhite; /* Textfarbe für die Info-Seite */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.person {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.person img {
-    border-radius: 50%;
-    margin-right: 10px;
-    height: 100px;
-    width: 100px;
-}
-
-.contact-form textarea {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 5px;
-}
-
-.contact-form input[type="submit"] {
-    padding: 10px 15px;
-    background-color: #F7951B; /* Hintergrundfarbe für die Schaltflächen */
-    color: white; /* Schriftfarbe für die Schaltflächen */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #e68a00; /* Dunklere Farbe beim Hover */
-}
-
-footer {
-    background-color: #002E5E;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px; /* Abstand zwischen Main und Footer */
-}
-
-/* Für die Klasse, wenn der Text vollständig angezeigt wird */
-.text.expand {
-    max-height: 500px; /* Höhe, wenn vollständig angezeigt */
-}
-
-/* Sendungen-Styles */
-.sendung-post {
-    background-color: #002E5E; /* Dunkler Hintergrund für Sendungs-Posts */
-    color: white; /* Textfarbe für Sendungs-Posts */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Schatten */
-    padding: 15px; /* Innenabstand */
-    margin-bottom: 20px; /* Abstand zwischen den Sendungs-Posts */
-    display: flex; /* Flexbox für die Sendungs-Post-Inhalte */
-    flex-direction: column; /* Spaltenlayout */
-    width: 15%;
-    height: 30%;
-}
-
-.sendung-post-header {
-    display: flex; /* Flexbox für Header */
-    align-items: center; /* Vertikale Ausrichtung */
-    margin-bottom: 10px; /* Abstand zwischen Header und Audio-Container */
-}
-
-.sendung-post-header .avatar {
-    border-radius: 50%; /* Runde Avatar */
-    height: 40px; /* Avatar-Höhe */
-    width: 40px; /* Avatar-Breite */
-    margin-right: 10px; /* Abstand zwischen Avatar und Text */
-}
-
-.sendung-title {
-    font-size: 20px; /* Titelgröße */
-    font-weight: bold; /* Fetter Text für Titel */
-}
-
-.audio-container {
-    margin: 10px 0; /* Abstand um den Audio-Container */
 }
 
 .audio-player {
-    width: 100%; /* Volle Breite des Audio-Players */
-    border-radius: 5px; /* Abgerundete Ecken für den Audio-Player */
-    outline: none; /* Kein Rand beim Fokus */
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
 }
 
 .likes {
-    margin-top: 10px; /* Abstand zwischen Text und Likes */
-    color: #999; /* Farbgebung für Likes */
+    margin-top: 10px;
+    color: #999;
 }
 
 /* Links im Post-Text */
-.post a {
+.post a, .sendung-post a {
     color: white; /* Linkfarbe in Posts auf weiß setzen */
     text-decoration: none; /* Keine Unterstreichung */
 }
 
 /* Hover-Effekt für Links in den Posts */
-.post a:hover {
+.post a:hover, .sendung-post a:hover {
     color: #F7951B; /* Farbe beim Hover auf die Headerfarbe ändern */
 }
 
@@ -287,4 +219,92 @@ footer {
 /* Hover-Effekt für den Nickname-Link */
 .header a:hover {
     color: #F7951B; /* Farbe beim Hover auf die Headerfarbe ändern */
+}
+
+/* Seiteninformationen */
+aside.info-area {
+    flex: 2;
+    background-color: #003366; /* Dunklerer Blauton für den Aside-Bereich */
+    color: #002E5E; /* Hellerer Farbton für den Text */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Kopfzeilen im Aside-Bereich */
+.info-area h3 {
+    color: #F7951B; /* Überschrift in Orange */
+}
+
+/* Personeninformationen */
+.person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.person img {
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 100px; /* Profilbildgröße */
+    width: 100px;
+}
+
+/* Kontaktformular */
+.contact-form input[type="text"], .contact-form textarea {
+    border: 1px solid #ccc; /* Rahmen für Eingabefelder */
+    border-radius: 5px; /* Abgerundete Ecken */
+    padding: 10px; /* Innenabstand */
+    width: 100%; /* Breite der Eingabefelder */
+}
+
+.contact-form textarea {
+    height: 80px; /* Höhe des Textbereichs */
+    margin-bottom: 10px; /* Abstand nach unten */
+}
+
+.contact-form input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #F7951B; /* Orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #e68a00; /* Dunklere Farbe beim Hover */
+}
+
+
+/* Footer-Stile */
+footer {
+    background-color: #002E5E; /* Dunkelblau */
+    color: #e68a00;
+    text-align: center;
+    padding: 20px 0; /* Erhöhtes Padding für mehr Höhe */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt im Footer */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+}
+
+/* Footer Links */
+footer .nav-link {
+    color: #e68a00; /* Schriftfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    padding: 0 10px; /* Abstand zwischen Links */
+}
+
+footer .nav-link:hover {
+    text-decoration: underline; /* Unterstreichen beim Hover */
+}
+
+/* Hashtag-Button */
+.hashtag-button {
+    background-color: #007BFF; /* Blauer Farbton */
+    color: white;
+    padding: 1px 1px;
+    border-radius: 5px;
+    text-decoration: none;
 }
