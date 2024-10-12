@@ -42,52 +42,51 @@
         <div class="container"
             <div class="row g-3">
                 <div class="blog-posts">
-                    <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 px-2"> <!-- Responive allignment -->
-                        {% for post in posts %}
-                            <div class="col">
-                                <div class="card h-100">
-                                
-                                    <div class="sendung-post-header">
-                                        <div class="col-6">
-                                        <div class="logo">
-                                            <img src="{{ post.post_avatar }}" alt="{{ post.username }}'s Avatar" width="50px">
-                                        </div>
-                                        </div>
-                                        <div class="col-6">
-                                        <strong>
-                                            <a href="profile.php?nickname={{ post.username | url_encode }}">{{ post.username }}</a>
-                                        </strong>
-                                        </div>
-                                   </div>
-                                   <div> 
-                                        <video class="card-img-top">
-                                            <source src="{{ post.post_video_file }}" type="video/mp4">
-                                            Ihr Browser unterstützt das Video-Tag.
-                                        </video>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row-1">
-                                        <div class="card-text" id="text-{{ loop.index }}">
-                                            {{ post.post_text }}
-                                        </div>
-                                        </div>
-                                        <div class="row-2">
-                                        <div class="hashtags">
-                                            {% for hashtag in post.post_tags %}
-                                                <a href="hashtag.php?tag={{ hashtag | url_encode }}">{{ hashtag }}</a>{% if not loop.last %}, {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                        </div>
-                                        <div class="row-2">
-                                        <div class="likes">
-                                            👍 {{ post.likes }} Likes
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
+                    <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 px-2">
+    <?php foreach ($posts as $post): ?>
+        <div class="col">
+            <div class="card h-100">
+                <div class="sendung-post-header">
+                    <div class="col-6">
+                        <div class="logo">
+                            <img src="<?= $post['post_avatar'] ?>" alt="<?= $post['username'] ?>'s Avatar" width="50px">
+                        </div>
                     </div>
+                    <div class="col-6">
+                        <strong>
+                            <a href="profile.php?nickname=<?= urlencode($post['username']) ?>"><?= $post['username'] ?></a>
+                        </strong>
+                    </div>
+                </div>
+                <div>
+                    <video class="card-img-top" controls>
+                        <source src="<?= $post['post_video_file'] ?>" type="video/mp4">
+                        Ihr Browser unterstützt das Video-Tag.
+                    </video>
+                </div>
+                <div class="card-body">
+                    <div class="row-1">
+                        <div class="card-text" id="text-<?= $post['userid'] ?>">
+                            <?= $post['post_text'] ?>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="hashtags">
+                            <?php foreach ($post['post_tags'] as $hashtag): ?>
+                                <a href="hashtag.php?tag=<?= urlencode($hashtag) ?>"><?= $hashtag ?></a><?php if (!$loop->last) echo ', '; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="likes">
+                            👍 <?= $post['likes'] ?? 0 ?> Likes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
                 </div>
 
                     <aside class="info-area col-md-6 h-100">
