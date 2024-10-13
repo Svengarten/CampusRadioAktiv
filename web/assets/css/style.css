@@ -1,0 +1,186 @@
+/* Grundlegende Einstellungen für den Body */
+body {
+    font-family: Arial, sans-serif; /* Schriftart */
+    line-height: 1.6; /* Zeilenhöhe */
+    color: #333; /* Textfarbe */
+}
+
+/* Header-Stile */
+header {
+    background-color: #002E5E; /* Helle Hintergrundfarbe für den Header */
+}
+
+.logo img {
+    height: 150px; /* Maximale Höhe des Logos */
+    margin-left: -250px;
+    display: flex;
+}
+
+/* Navbar-Stile */
+.navbar {
+    padding: 0.5rem 1rem; /* Innenabstand der Navbar */
+    color: #F7951B;
+}
+
+.nav-link {
+    font-size: 2em;
+    margin-right: 50px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.form-inline{
+    margin-right: -250px;
+    display: flex;
+}
+
+/* Schriftfarbe für die Navbar-Links */
+.navbar-light .navbar-nav .nav-link {
+    color: #F7951B !important; /* Setze die Schriftfarbe auf #F7951B */
+}
+
+/* Schriftfarbe für die Links im Hover-Zustand */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d68618 !important; /* Dunklere Farbe beim Hover (Mouseover) */
+}
+
+/* Schriftfarbe für Dropdown-Menü-Links */
+.navbar-light .navbar-nav .dropdown-menu .dropdown-item {
+    color: #F7951B !important; /* Setze die Schriftfarbe für Dropdown-Links */
+    background-color: #002E5E;
+}
+
+/* Hintergrundfarbe für Dropdown-Links beim Hover */
+.navbar-light .navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #002E5E !important; /* Schriftfarbe beim Hover */
+    background-color: #F7951B !important; /* Hintergrundfarbe beim Hover */
+}
+
+/* Hauptinhalt */
+main {
+    padding: 2rem 0; /* Innenabstand für den Hauptinhalt */
+}
+
+/* Kartenstil für Blogposts */
+.card {
+    border: 1px solid #dee2e6; /* Rahmen um die Karten */
+    border-radius: 0.5rem; /* Abgerundete Ecken */
+}
+
+.card-body {
+    padding: 1.5rem; /* Innenabstand in den Karten */
+}
+
+/* Flexbox für vertikale Anordnung */
+.flex-grow-1 {
+    flex-grow: 1; /* Flex-Elemente wachsen */
+}
+
+/* Stil für die Video-Container */
+.embed-responsive-16by9 {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Seitenverhältnis */
+}
+
+.embed-responsive-9by16 {
+    padding-top: 177.78%; /* 9:16 Seitenverhältnis */
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Stile für die Fußzeile */
+footer {
+    background-color: #002E5E !important; /* Helle Hintergrundfarbe für den Footer */
+    color: #F7951B; /* Graue Textfarbe für den Footer */
+}
+
+footer .nav-link {
+    color: #F7951B; /* Farbe der Links im Footer */
+}
+
+footer .nav-link:hover {
+    color: #F7951B; /* Hover-Farbe der Links im Footer */
+}
+
+/* Stile für Sidebar */
+aside {
+    margin-top: rem; /* Abstand nach oben für die Sidebar */
+    
+}
+
+.card{
+    background-color: #002E5E !important;
+    color: white;
+}
+
+.card-title {
+    font-size: 1.25rem; /* Schriftgröße der Titel in der Sidebar */
+    
+}
+.list-group-item {
+    color: black !important;
+}
+.btn-warning {
+    width: 100%; /* Schaltflächen füllen die Breite des Containers */
+}
+
+
+/* Stil für die benutzerdefinierten Buttons */
+.btn-custom {
+    background-color: #F7951B !important; /* Hintergrundfarbe der Buttons */
+    color: #fff; /* Textfarbe der Buttons */
+    border: none; /* Keine Rahmenlinie */
+    border-radius: 5px; /* Runde Ecken */
+    padding: 10px 15px; /* Padding für die Schaltflächen */
+    transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
+}
+
+.btn-custom:hover {
+    background-color: #e08e1c; /* Dunklere Farbe bei Hover */
+}
+
+
+/* Stil für die Social-Media-Buttons */
+.social-buttons {
+    margin-top: 15px; /* Abstand oben für den Abschnitt */
+}
+
+.btn-social {
+    color: #fff!important; /* Textfarbe der Buttons */
+    display: inline-block; /* Schaltflächen nebeneinander anordnen */
+    margin-right: 10px; /* Abstand zwischen den Buttons */
+    text-decoration: none; /* Unterstreichung entfernen */
+    padding: 10px 15px; /* Padding für die Schaltflächen */
+    border-radius: 5px; /* Runde Ecken */
+    transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
+}
+
+.btn-social:hover {
+    background-color: #e08e1c!important; /* Dunklere Farbe bei Hover */
+}
+
+
+/* Responsive Design-Anpassungen */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem; /* Mehr Padding für mobile Ansicht */
+    }
+
+    .card {
+        margin-bottom: 1rem; /* Abstand zwischen den Karten */
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link {
+        font-size: 0.9rem; /* Kleinere Schriftgröße für mobile Ansicht */
+    }
+}
