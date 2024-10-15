@@ -13,11 +13,11 @@
 <body>
 
     <!-- Header Section -->
-    <header class="py-3 border-bottom">
-        <div class="container d-flex justify-content-between align-items-center">
+    <header class="custom_py-3 custom_border-bottom">
+        <div class="container custom_d-flex custom_justify-content-between custom_align-items-center">
             <!-- Logo -->
-            <a href="social.php" class="logo">
-                <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo" height="50">
+            <a href="social.php" class="custom_logo">
+                <img src="assets/img/CRA_Logo.svg" alt="Campus Radio Aktiv Logo">
             </a>
             <!-- Navigation -->
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -45,26 +45,26 @@
             </nav>
 
             <!-- Search Bar -->
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+            <form class="form-inline custom_form-inline">
+                <input class="form-control custom_mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
             </form>
         </div>
     </header>
 
     <!-- Main Content Section -->
-    <main class="container my-4">
+    <main class="container custom_my-4">
         <div class="row">
             <!-- Blog Posts -->
             <div class="col-md-8">
-                <h2 class="mb-4">Blog Posts</h2>
+                <h2 class="mb-4">Social Media</h2>
                 <div class="row">
                     {% for post in posts %}
-                    <div class="col-lg-6 col-md-12 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column">
-                                <div class="d-flex align-items-center mb-3">
+                    <div class="col-lg-6 col-md-12 custom_mb-4">
+                        <div class="card custom_h-100">
+                            <div class="card-body custom_d-flex custom_flex-column">
+                                <div class="custom_d-flex custom_align-items-center custom_mb-3">
                                     <img src="{{ post.user_image }}" alt="{{ post.user_realname }}'s Avatar"
-                                        class="rounded-circle mr-3" height="50" width="50">
+                                        class="rounded-circle custom_mr-3" height="50" width="50">
                                     <h5 class="mb-0">
                                         <a href="profile.php?nickname={{ post.user_realname | url_encode }}" class="text-decoration-none">
                                             {{ post.user_realname }}
@@ -72,7 +72,7 @@
                                     </h5>
                                 </div>
 
-                                <div class="mb-3 flex-grow-1">
+                                <div class="custom_mb-3 custom_flex-grow-1">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <video controls class="embed-responsive-item">
                                             <source src="{{ post.post_video_file }}" type="video/mp4">
@@ -85,7 +85,7 @@
                                     <p>{{ post.post_text }}</p>
                                 </div>
 
-                                <div class="preview" style="overflow: hidden; max-height: 4.5em; line-height: 1.5em;">
+                                <div class="custom_preview">
                                     <p>{{ post.post_text }}</p>
                                 </div>
 
@@ -93,13 +93,13 @@
                                     Mehr anzeigen
                                 </a>
 
-                                <div class="mt-3">
+                                <div class="custom_mt-3">
                                     {% for hashtag in post.post_tags %}
                                     <a href="hashtag.php?tag={{ hashtag | url_encode }}" class="badge badge-primary mr-1">{{ hashtag }}</a>
                                     {% endfor %}
                                 </div>
 
-                                <div class="mt-3">
+                                <div class="custom_mt-3">
                                     <span class="mr-2">👍 {{ post.likes }} Likes</span>
                                 </div>
                             </div>
@@ -125,37 +125,37 @@
                         </ul>
 
                         <h3 class="card-title mt-4">Kontakt zum Studio via WhatsApp</h3>
-                        <a href="https://wa.me/YOUR_NUMBER?text=Hallo%20Campus%20Radio%20Aktiv!" class="btn btn-custom btn-block" target="_blank">
+                        <a href="https://wa.me/YOUR_NUMBER?text=Hallo%20Campus%20Radio%20Aktiv!" class="btn custom_btn-custom btn-block" target="_blank">
                             Nachricht an das Studio senden
                         </a>
 
                         <h3 class="card-title mt-4">Interesse am Campus Radio?</h3>
                         <p>Scanne den QR-Code, um mehr Informationen zu erhalten oder um mitzumachen!</p>
-                        <img src="assets/img/frame.png" alt="QR-Code für Campus Radio Aktiv" class="img-fluid mb-3" />
+                        <img src="assets/img/frame.png" alt="QR-Code für Campus Radio Aktiv" class="img-fluid custom_mb-3" />
 
                         <h3 class="card-title">E-Mail senden</h3>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control mb-2" placeholder="Ihr Name" required>
+                                <input type="text" class="form-control custom_mb-2" placeholder="Ihr Name" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control mb-2" placeholder="Ihre Nachricht" required></textarea>
+                                <textarea class="form-control custom_mb-2" placeholder="Ihre Nachricht" required></textarea>
                             </div>
-                            <input type="submit" value="Absenden" class="btn btn-custom btn-block">
+                            <input type="submit" value="Absenden" class="btn custom_btn-custom btn-block">
                         </form>
 
                         <h3 class="card-title mt-4">Folge uns</h3>
-                        <div class="social-buttons">
-                            <a href="https://www.facebook.com/YOUR_PAGE" class="btn btn-social" target="_blank">
+                        <div class="custom_social-buttons">
+                            <a href="https://www.facebook.com/YOUR_PAGE" class="btn custom_btn-social" target="_blank">
                                 <i class="fab fa-facebook-f"></i> Facebook
                             </a>
-                            <a href="https://www.twitter.com/YOUR_PAGE" class="btn btn-social" target="_blank">
+                            <a href="https://www.twitter.com/YOUR_PAGE" class="btn custom_btn-social" target="_blank">
                                 <i class="fab fa-twitter"></i> Twitter
                             </a>
-                            <a href="https://www.instagram.com/YOUR_PAGE" class="btn btn-social" target="_blank">
+                            <a href="https://www.instagram.com/YOUR_PAGE" class="btn custom_btn-social" target="_blank">
                                 <i class="fab fa-instagram"></i> Instagram
                             </a>
-                            <a href="https://www.youtube.com/YOUR_CHANNEL" class="btn btn-social" target="_blank">
+                            <a href="https://www.youtube.com/YOUR_CHANNEL" class="btn custom_btn-social" target="_blank">
                                 <i class="fab fa-youtube"></i> YouTube
                             </a>
                         </div>
@@ -167,14 +167,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 border-top">
+    <footer class="custom_text-center custom_py-3 custom_border-top">
         <div class="container">
             <p class="mb-0">&copy; 2024 Campus Radio Aktiv. Alle Rechte vorbehalten.</p>
             <nav>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Datenschutz</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Impressum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                <ul class="custom_nav">
+                    <li class="custom_nav-item"><a class="custom_nav-link" href="#">Datenschutz</a></li>
+                    <li class="custom_nav-item"><a class="custom_nav-link" href="#">Impressum</a></li>
+                    <li class="custom_nav-item"><a class="custom_nav-link" href="#">Kontakt</a></li>
                 </ul>
             </nav>
         </div>

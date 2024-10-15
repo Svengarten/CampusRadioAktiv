@@ -1,186 +1,205 @@
-/* Grundlegende Einstellungen für den Body */
-body {
-    font-family: Arial, sans-serif; /* Schriftart */
-    line-height: 1.6; /* Zeilenhöhe */
-    color: #333; /* Textfarbe */
+.custom_py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-/* Header-Stile */
-header {
-    background-color: #002E5E; /* Helle Hintergrundfarbe für den Header */
+.custom_border-bottom {
+    border-bottom: 1px solid #ddd;
 }
 
-.logo img {
-    height: 150px; /* Maximale Höhe des Logos */
-    margin-left: -250px;
+.custom_d-flex {
     display: flex;
 }
 
-/* Navbar-Stile */
-.navbar {
-    padding: 0.5rem 1rem; /* Innenabstand der Navbar */
-    color: #F7951B;
+.custom_justify-content-between {
+    justify-content: space-between;
 }
 
-.nav-link {
-    font-size: 2em;
-    margin-right: 50px;
-    text-decoration: none;
+.custom_align-items-center {
     align-items: center;
 }
 
-.form-inline{
-    margin-right: -250px;
+.custom_logo img {
+    height: 50px;
+}
+
+.custom_navbar-toggler {
+    border: none;
+}
+
+.custom_nav-link {
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.custom_nav-link:hover {
+    color: #007bff;
+}
+
+.custom_dropdown-menu {
+    background-color: #fff;
+}
+
+.custom_dropdown-item {
+    color: #000;
+}
+
+.custom_dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.custom_form-inline {
     display: flex;
 }
 
-/* Schriftfarbe für die Navbar-Links */
-.navbar-light .navbar-nav .nav-link {
-    color: #F7951B !important; /* Setze die Schriftfarbe auf #F7951B */
+.custom_form-control {
+    margin-right: 1rem;
 }
 
-/* Schriftfarbe für die Links im Hover-Zustand */
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #d68618 !important; /* Dunklere Farbe beim Hover (Mouseover) */
+.custom_my-4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Schriftfarbe für Dropdown-Menü-Links */
-.navbar-light .navbar-nav .dropdown-menu .dropdown-item {
-    color: #F7951B !important; /* Setze die Schriftfarbe für Dropdown-Links */
-    background-color: #002E5E;
+.custom_card {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
 }
 
-/* Hintergrundfarbe für Dropdown-Links beim Hover */
-.navbar-light .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #002E5E !important; /* Schriftfarbe beim Hover */
-    background-color: #F7951B !important; /* Hintergrundfarbe beim Hover */
+.custom_card-body {
+    padding: 1.25rem;
 }
 
-/* Hauptinhalt */
-main {
-    padding: 2rem 0; /* Innenabstand für den Hauptinhalt */
+.custom_h-100 {
+    height: 100%;
 }
 
-/* Kartenstil für Blogposts */
-.card {
-    border: 1px solid #dee2e6; /* Rahmen um die Karten */
-    border-radius: 0.5rem; /* Abgerundete Ecken */
+.custom_mb-4 {
+    margin-bottom: 1.5rem;
 }
 
-.card-body {
-    padding: 1.5rem; /* Innenabstand in den Karten */
+.custom_d-flex.custom_align-items-center {
+    display: flex;
+    align-items: center;
 }
 
-/* Flexbox für vertikale Anordnung */
-.flex-grow-1 {
-    flex-grow: 1; /* Flex-Elemente wachsen */
+.custom_rounded-circle {
+    border-radius: 50%;
 }
 
-/* Stil für die Video-Container */
-.embed-responsive-16by9 {
+.custom_mr-3 {
+    margin-right: 1rem;
+}
+
+.custom_flex-column {
+    flex-direction: column;
+}
+
+.custom_flex-grow-1 {
+    flex-grow: 1;
+}
+
+.custom_embed-responsive {
     position: relative;
     display: block;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Seitenverhältnis */
+    padding: 0;
+    overflow: hidden;
 }
 
-.embed-responsive-9by16 {
-    padding-top: 177.78%; /* 9:16 Seitenverhältnis */
+.custom_embed-responsive-16by9 {
+    padding-bottom: 56.25%;
 }
 
-.embed-responsive-item {
+.custom_embed-responsive-item {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
 }
 
-/* Stile für die Fußzeile */
-footer {
-    background-color: #002E5E !important; /* Helle Hintergrundfarbe für den Footer */
-    color: #F7951B; /* Graue Textfarbe für den Footer */
+.custom_preview {
+    max-height: 4.5em;
+    overflow: hidden;
 }
 
-footer .nav-link {
-    color: #F7951B; /* Farbe der Links im Footer */
+.custom_btn.custom_btn-link {
+    color: #007bff;
+    text-decoration: none;
 }
 
-footer .nav-link:hover {
-    color: #F7951B; /* Hover-Farbe der Links im Footer */
+.custom_mt-3 {
+    margin-top: 1rem;
 }
 
-/* Stile für Sidebar */
-aside {
-    margin-top: rem; /* Abstand nach oben für die Sidebar */
-    
+.custom_badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 0.25rem;
 }
 
-.card{
-    background-color: #002E5E !important;
-    color: white;
+.custom_badge-primary {
+    background-color: #007bff;
 }
 
-.card-title {
-    font-size: 1.25rem; /* Schriftgröße der Titel in der Sidebar */
-    
-}
-.list-group-item {
-    color: black !important;
-}
-.btn-warning {
-    width: 100%; /* Schaltflächen füllen die Breite des Containers */
+.custom_list-group-item {
+    border: none;
 }
 
-
-/* Stil für die benutzerdefinierten Buttons */
-.btn-custom {
-    background-color: #F7951B !important; /* Hintergrundfarbe der Buttons */
-    color: #fff; /* Textfarbe der Buttons */
-    border: none; /* Keine Rahmenlinie */
-    border-radius: 5px; /* Runde Ecken */
-    padding: 10px 15px; /* Padding für die Schaltflächen */
-    transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
+.custom_img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
-.btn-custom:hover {
-    background-color: #e08e1c; /* Dunklere Farbe bei Hover */
+.custom_btn-custom {
+    background-color: #007bff;
+    color: #fff;
 }
 
-
-/* Stil für die Social-Media-Buttons */
-.social-buttons {
-    margin-top: 15px; /* Abstand oben für den Abschnitt */
+.custom_btn-social {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    text-align: center;
 }
 
-.btn-social {
-    color: #fff!important; /* Textfarbe der Buttons */
-    display: inline-block; /* Schaltflächen nebeneinander anordnen */
-    margin-right: 10px; /* Abstand zwischen den Buttons */
-    text-decoration: none; /* Unterstreichung entfernen */
-    padding: 10px 15px; /* Padding für die Schaltflächen */
-    border-radius: 5px; /* Runde Ecken */
-    transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
+.custom_text-center {
+    text-align: center;
 }
 
-.btn-social:hover {
-    background-color: #e08e1c!important; /* Dunklere Farbe bei Hover */
+.custom_border-top {
+    border-top: 1px solid #ddd;
 }
 
-
-/* Responsive Design-Anpassungen */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 1rem; /* Mehr Padding für mobile Ansicht */
-    }
-
-    .card {
-        margin-bottom: 1rem; /* Abstand zwischen den Karten */
-    }
+.custom_nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
-@media (max-width: 576px) {
-    .nav-link {
-        font-size: 0.9rem; /* Kleinere Schriftgröße für mobile Ansicht */
-    }
+.custom_nav-item {
+    list-style: none;
+    margin: 0 0.5rem;
 }
+
+.custom_nav-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.custom_nav-link:hover {
+    text-decoration: underline;
+}
+

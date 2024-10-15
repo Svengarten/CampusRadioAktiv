@@ -10,7 +10,7 @@ header {
     background-color: #002E5E; /* Helle Hintergrundfarbe für den Header */
 }
 
-.logo img {
+.custom_logo img {
     height: 150px; /* Maximale Höhe des Logos */
     margin-left: -250px;
     display: flex;
@@ -29,7 +29,7 @@ header {
     align-items: center;
 }
 
-.form-inline{
+.custom_form-inline {
     margin-right: -250px;
     display: flex;
 }
@@ -65,14 +65,16 @@ main {
 .card {
     border: 1px solid #dee2e6; /* Rahmen um die Karten */
     border-radius: 0.5rem; /* Abgerundete Ecken */
+    background-color: #002E5E !important; /* Blauton für die Karten */
+    color: white; /* Weiße Schrift für bessere Lesbarkeit */
 }
 
-.card-body {
+.custom_card-body {
     padding: 1.5rem; /* Innenabstand in den Karten */
 }
 
 /* Flexbox für vertikale Anordnung */
-.flex-grow-1 {
+.custom_flex-grow-1 {
     flex-grow: 1; /* Flex-Elemente wachsen */
 }
 
@@ -112,30 +114,35 @@ footer .nav-link:hover {
 
 /* Stile für Sidebar */
 aside {
-    margin-top: rem; /* Abstand nach oben für die Sidebar */
-    
+    margin-top: 1rem; /* Abstand nach oben für die Sidebar */
+    background-color: #002E5E !important; /* Blauton für die Sidebar */
+    color: white; /* Weiße Schrift für bessere Lesbarkeit */
+    padding: 1rem; /* Innenabstand der Sidebar */
 }
 
-.card{
+.custom_card {
     background-color: #002E5E !important;
     color: white;
 }
 
-.card-title {
+.custom_card-title {
     font-size: 1.25rem; /* Schriftgröße der Titel in der Sidebar */
-    
+    color: white; /* Weiße Schrift */
 }
+
 .list-group-item {
-    color: black !important;
+    background-color: #002E5E !important; /* Blauton für den Infobereich */
+    color: white !important; /* Weiße Schrift */
+    border: 1px solid white !important; /* Rahmen in der Akzentfarbe */
 }
+
 .btn-warning {
     width: 100%; /* Schaltflächen füllen die Breite des Containers */
 }
 
-
 /* Stil für die benutzerdefinierten Buttons */
 .btn-custom {
-    background-color: #F7951B !important; /* Hintergrundfarbe der Buttons */
+    background-color: #002E5E !important;/* Hintergrundfarbe der Buttons */
     color: #fff; /* Textfarbe der Buttons */
     border: none; /* Keine Rahmenlinie */
     border-radius: 5px; /* Runde Ecken */
@@ -147,13 +154,13 @@ aside {
     background-color: #e08e1c; /* Dunklere Farbe bei Hover */
 }
 
-
 /* Stil für die Social-Media-Buttons */
 .social-buttons {
     margin-top: 15px; /* Abstand oben für den Abschnitt */
 }
 
-.btn-social {
+.btn {
+    background-color: #0056b3 !important;
     color: #fff!important; /* Textfarbe der Buttons */
     display: inline-block; /* Schaltflächen nebeneinander anordnen */
     margin-right: 10px; /* Abstand zwischen den Buttons */
@@ -163,10 +170,9 @@ aside {
     transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
 }
 
-.btn-social:hover {
+.btn:hover {
     background-color: #e08e1c!important; /* Dunklere Farbe bei Hover */
 }
-
 
 /* Responsive Design-Anpassungen */
 @media (max-width: 768px) {
@@ -183,4 +189,118 @@ aside {
     .nav-link {
         font-size: 0.9rem; /* Kleinere Schriftgröße für mobile Ansicht */
     }
+}
+
+/* Benutzerdefinierte Stile */
+.custom_py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.custom_border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom_d-flex {
+    display: flex;
+}
+
+.custom_justify-content-between {
+    justify-content: space-between;
+}
+
+.custom_align-items-center {
+    align-items: center;
+}
+
+.custom_logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.custom_form-inline {
+    display: flex;
+}
+
+.custom_mr-sm-2 {
+    margin-right: .5rem;
+}
+
+.custom_my-4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom_mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.custom_h-100 {
+    height: 100%;
+}
+
+.custom_flex-column {
+    flex-direction: column;
+}
+
+.custom_mb-3 {
+    margin-bottom: 1rem;
+}
+
+.custom_preview {
+    display: none;
+}
+
+.custom_mt-3 {
+    margin-top: 1rem;
+}
+
+.custom_btn-custom {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.custom_btn-custom:hover {
+    background-color: #0056b3;
+}
+
+.custom_btn-social {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.custom_social-buttons i {
+    margin-right: 0.5rem;
+}
+
+.custom_text-center {
+    text-align: center;
+}
+
+.custom_border-top {
+    border-top: 1px solid #dee2e6;
+}
+
+.custom_nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.custom_nav-item {
+    margin-right: 1rem;
+}
+
+.custom_nav-link {
+    color: #d68618;
+    text-decoration: none;
+}
+
+.custom_nav-link:hover {
+    text-decoration: underline;
 }
